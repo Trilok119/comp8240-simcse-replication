@@ -13,7 +13,8 @@ and testing it on two new datasets: **PAWS** and **WikiSim** (a new dataset buil
 | File | What it is |
 |---|---|
 | `SimCSE_replication.ipynb` | The full notebook: replication, PAWS, WikiSim, annotation, LLM judge |
-| `requirements.txt` | Python packages used |
+| `extra_analysis.ipynb` | Extra checks for the final report: exact library versions, a second replication run, STS test-set sizes, bootstrap 95% confidence intervals, the WikiSim box plot and example errors. It only reads the saved WikiSim files |
+| `requirements.txt` | Exact package versions used in our final run |
 | `data/raw_articles.json` | The 20 Wikipedia articles used (with revision IDs) |
 | `data/sentences.json` | 6,098 cleaned sentences |
 | `data/wikisim_pairs.csv` | The 400 WikiSim pairs with levels and SimCSE scores |
@@ -76,4 +77,11 @@ sed -i "s/tokenizer.batch_encode_plus(/tokenizer(/g" evaluation.py
 ## Use of AI
 
 The second annotation (`annotation_claude.csv`) was produced by an AI model (Claude, Anthropic),
-not by a human. Generative AI was also used to help clean this code and draft the report.
+not by a human. In that file the score column is named `human_score` only to match the annotation-sheet format;
+these scores are from the AI annotator. Generative AI was also used to help clean this code and draft the report.
+
+## Note on STS12 and STS13 sizes
+
+`extra_analysis.ipynb` counts every gold-standard file in the STS folders, so it prints 6,216 for STS12 and 2,250 for STS13.
+The STS12 folder also contains a combined `ALL` file, and the STS13 folder contains an `SMT` subset, and SentEval does not use either.
+The test sets actually used in the evaluation have 3,108 (STS12) and 1,500 (STS13) pairs.
