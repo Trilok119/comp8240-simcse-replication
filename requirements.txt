@@ -1,11 +1,13 @@
-transformers
-torch
-scipy
-scikit-learn
-prettytable
-datasets
-pandas
-numpy
-nltk
-requests
-accelerate
+# Exact versions from our final run (Google Colab, Python 3.13.16, Tesla T4 GPU, November 2026)
+accelerate==1.15.0
+datasets==4.8.5
+matplotlib==3.10.0
+nltk==3.9.1
+numpy==2.4.6
+pandas==2.2.3
+prettytable==3.18.0
+requests==2.32.4
+scikit-learn==1.6.1
+scipy==1.16.3
+torch==2.11.0
+transformers==5.22.0
