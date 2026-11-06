@@ -1,0 +1,11 @@
+transformers
+torch
+scipy
+scikit-learn
+prettytable
+datasets
+pandas
+numpy
+nltk
+requests
+accelerate
