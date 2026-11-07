@@ -14,6 +14,7 @@ and testing it on two new datasets: **PAWS** and **WikiSim** (a new dataset buil
 |---|---|
 | `SimCSE_replication.ipynb` | The full notebook: replication, PAWS, WikiSim, annotation, LLM judge |
 | `extra_analysis.ipynb` | Extra checks for the final report: exact library versions, a second replication run, STS test-set sizes, bootstrap 95% confidence intervals, the WikiSim box plot and example errors. It only reads the saved WikiSim files |
+| `extra_analysis_run_2026-11-06.ipynb` | The saved run of `extra_analysis.ipynb` (6 Nov 2026) with all text outputs: versions, replication, STS sizes, confidence intervals and error examples used in the report |
 | `train_unsup.ipynb` | Our own re-training of unsupervised SimCSE on the authors' 1M Wikipedia sentences (paper settings, 54 min on a T4). Saved with outputs: average STS score 72.55 vs 76.25 in the paper |
 | `requirements.txt` | Exact package versions used in our final run |
 | `data/raw_articles.json` | The 20 Wikipedia articles used (with revision IDs) |
