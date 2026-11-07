@@ -83,6 +83,13 @@ The second annotation (`annotation_claude.csv`) was produced by an AI model (Cla
 not by a human. In that file the score column is named `human_score` only to match the annotation-sheet format;
 these scores are from the AI annotator. Generative AI was also used to help clean this code and draft the report.
 
+## Note on re-running the LLM judge
+
+`SimCSE_replication.ipynb` is saved with the outputs of a full re-run on 7 Nov 2026 (PyTorch 2.14.1, transformers 5.22.1).
+All numbers match the report except LLM judge version 1, which gave Spearman 26.59 with the author's scores instead of 29.32
+(score counts 42/48/2/8 instead of 39/51/2/8). Small numerical differences in half-precision GPU computation can change the
+model's single-digit answer for a few pairs. LLM judge version 2 (62.50) and every other result were identical. The report mentions this.
+
 ## Note on STS12 and STS13 sizes
 
 `extra_analysis.ipynb` counts every gold-standard file in the STS folders, so it prints 6,216 for STS12 and 2,250 for STS13.
