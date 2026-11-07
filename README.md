@@ -14,6 +14,7 @@ and testing it on two new datasets: **PAWS** and **WikiSim** (a new dataset buil
 |---|---|
 | `SimCSE_replication.ipynb` | The full notebook: replication, PAWS, WikiSim, annotation, LLM judge |
 | `extra_analysis.ipynb` | Extra checks for the final report: exact library versions, a second replication run, STS test-set sizes, bootstrap 95% confidence intervals, the WikiSim box plot and example errors. It only reads the saved WikiSim files |
+| `train_unsup.ipynb` | Our own re-training of unsupervised SimCSE on the authors' 1M Wikipedia sentences (paper settings, 54 min on a T4). Saved with outputs: average STS score 72.55 vs 76.25 in the paper |
 | `requirements.txt` | Exact package versions used in our final run |
 | `data/raw_articles.json` | The 20 Wikipedia articles used (with revision IDs) |
 | `data/sentences.json` | 6,098 cleaned sentences |
@@ -58,6 +59,7 @@ sed -i "s/tokenizer.batch_encode_plus(/tokenizer(/g" evaluation.py
 | Unsup-SimCSE (ours = paper) | 68.40 | 82.41 | 74.38 | 80.91 | 78.56 | 76.85 | 72.23 | 76.25 |
 | Sup-SimCSE (ours) | 75.30 | 84.67 | 80.19 | 85.40 | 80.82 | 84.26 | 80.39 | 81.58 |
 | Sup-SimCSE (paper) | 75.30 | 84.67 | 80.19 | 85.40 | 80.82 | 84.25 | 80.39 | 81.57 |
+| Unsup-SimCSE (our re-training) | 63.31 | 78.24 | 70.33 | 77.07 | 78.06 | 71.66 | 69.15 | 72.55 |
 
 **New data:**
 
