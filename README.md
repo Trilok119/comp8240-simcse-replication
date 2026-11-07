@@ -25,6 +25,8 @@ and testing it on two new datasets: **PAWS** and **WikiSim** (a new dataset buil
 | `data/annotation_claude.csv` | Second annotation of the same 100 pairs by an **AI model (Claude, Anthropic)** — not a human annotator |
 | `data/annotated_100.csv` | The 100 pairs with all scores (human, SimCSE, word overlap, LLM judge) |
 
+`SimCSE_replication.ipynb` was last re-run on 7 Nov 2026 with PyTorch 2.14.1 / transformers 5.22.1; `requirements.txt` lists the versions of the original run.
+
 ## How to run
 
 1. Open `SimCSE_replication.ipynb` in **Google Colab** and choose a **GPU runtime** (Runtime → Change runtime type → T4 GPU).
